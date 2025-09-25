@@ -124,7 +124,7 @@ class AppSelector(QObject):
             qt_window.close()
 
         # set the title
-        qt_window.setWindowTitle("App Selector")
+        qt_window.setWindowTitle("应用选择器")
         # creating a QWebEngineView
         qt_window.browser = CustomWebEngineView()
 
@@ -144,7 +144,7 @@ class AppSelector(QObject):
         qt_window.setStatusBar(qt_window.status)
 
         # creating QToolBar for navigation
-        navtb = QToolBar("Navigation")
+        navtb = QToolBar("导航")
 
         # adding this tool bar tot he main window
         qt_window.addToolBar(navtb)
@@ -154,7 +154,7 @@ class AppSelector(QObject):
         back_btn = QAction("", qt_window)
 
         # setting status tip
-        back_btn.setStatusTip("Back to previous page")
+        back_btn.setStatusTip("返回上一页")
         back_btn.setIcon(QIcon(f"{parent_dir}/data/images/Back.png"))
 
         # adding action to the back button
@@ -166,7 +166,7 @@ class AppSelector(QObject):
 
         # similarly for forward action
         next_btn = QAction("", qt_window)
-        next_btn.setStatusTip("Forward to next page")
+        next_btn.setStatusTip("前进到下一页")
         next_btn.setIcon(QIcon(f"{parent_dir}/data/images/forward.png"))
 
         # adding action to the next button
@@ -180,7 +180,7 @@ class AppSelector(QObject):
 
         # similarly for reload action
         reload_btn = QAction("", qt_window)
-        reload_btn.setStatusTip("Reload page")
+        reload_btn.setStatusTip("重新加载页面")
         reload_btn.setIcon(QIcon(f"{parent_dir}/data/images/reload.png"))
 
         # adding action to the reload button
@@ -190,7 +190,7 @@ class AppSelector(QObject):
 
         # similarly for home button
         home_btn = QAction("", qt_window)
-        home_btn.setStatusTip("Home page")
+        home_btn.setStatusTip("主页")
         home_btn.setIcon(QIcon(f"{parent_dir}/data/images/home.png"))
 
         # adding action to the home button
@@ -210,13 +210,13 @@ class AppSelector(QObject):
         # adding select button to the tool bar
         navtb.addWidget(qt_window.urlbar)
         qt_window.label = QLabel(qt_window)
-        qt_window.label.setText("  Select The App ")
+        qt_window.label.setText("  选择应用 ")
         qt_window.label.setStyleSheet("QLabel{font-size: 10pt;}")
         navtb.addWidget(qt_window.label)
 
         qt_window.select_btn = QPushButton(qt_window)
-        qt_window.select_btn.setText("Select")
-        qt_window.select_btn.setStatusTip("Select The File To Download")
+        qt_window.select_btn.setText("选择")
+        qt_window.select_btn.setStatusTip("选择要下载的应用")
         qt_window.select_btn.setIcon(QIcon(f"{parent_dir}/data/images/ok.png"))
         qt_window.select_btn.clicked.connect(current_url)
         navtb.addWidget(qt_window.select_btn)

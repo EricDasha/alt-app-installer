@@ -51,6 +51,12 @@ A program to  download and install microsoft store apps, for cli version check [
 - Run the "run.bat" or run the command `.\run` in the terminal from the cloned folder
 - Enjoy!
 
+## 中文化与打包（Windows）
+
+- 运行（中文界面）：双击 `run.bat`
+- 打包：双击 `build.bat`，输出在 `dist/Alt App Installer CN/`
+- 打包中包含资源：`app/data/images` 与 `app/data/xml`
+
 # Video Guide
 
 https://youtu.be/ayIilTc-6u4

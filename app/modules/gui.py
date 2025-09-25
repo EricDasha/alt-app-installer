@@ -513,119 +513,119 @@ class Ui_MainProgram(object):
 
     def retranslateUi(self, MainProgram):
         _translate = QtCore.QCoreApplication.translate
-        MainProgram.setWindowTitle(_translate("MainProgram", "Alt App Installer"))
-        self.Title_2.setText(_translate("MainProgram", "Alt App Installer"))
+        MainProgram.setWindowTitle(_translate("MainProgram", "Alt 应用安装器"))
+        self.Title_2.setText(_translate("MainProgram", "Alt 应用安装器"))
         self.Select_app_label.setText(
-            _translate("MainProgram", "Select App To Install:")
+            _translate("MainProgram", "选择要安装的应用：")
         )
-        self.pushButton.setText(_translate("MainProgram", "Choose App"))
-        self.stop_btn.setText(_translate("MainProgram", "Stop"))
-        self.Main_bar.setText(_translate("MainProgram", "Main Progress: "))
-        self.Current_bar.setText(_translate("MainProgram", "Current Progress: "))
-        self.menuOptions.setTitle(_translate("MainProgram", "Options"))
-        self.advancedmenu.setStatusTip(_translate("MainProgram", "Advanced Settings"))
-        self.advancedmenu.setTitle(_translate("MainProgram", "Advanced"))
+        self.pushButton.setText(_translate("MainProgram", "选择应用"))
+        self.stop_btn.setText(_translate("MainProgram", "停止"))
+        self.Main_bar.setText(_translate("MainProgram", "总体进度："))
+        self.Current_bar.setText(_translate("MainProgram", "当前进度："))
+        self.menuOptions.setTitle(_translate("MainProgram", "选项"))
+        self.advancedmenu.setStatusTip(_translate("MainProgram", "高级设置"))
+        self.advancedmenu.setTitle(_translate("MainProgram", "高级"))
         self.Dependencymenu.setStatusTip(
-            _translate("MainProgram", "Dependency Download Option")
+            _translate("MainProgram", "依赖下载选项")
         )
-        self.Dependencymenu.setTitle(_translate("MainProgram", "Dependencies"))
-        self.menuAbout.setTitle(_translate("MainProgram", "Help"))
+        self.Dependencymenu.setTitle(_translate("MainProgram", "依赖项"))
+        self.menuAbout.setTitle(_translate("MainProgram", "帮助"))
         self.actionInstall_From_File.setText(
-            _translate("MainProgram", "Install From File")
+            _translate("MainProgram", "从文件安装")
         )
         self.actionInstall_From_File.setStatusTip(
-            _translate("MainProgram", "Install App (appx,Msix) From Local File")
+            _translate("MainProgram", "从本地文件安装应用（Appx、Msix 等）")
         )
         self.actionDownload_From_Url.setText(
-            _translate("MainProgram", "Install From Url")
+            _translate("MainProgram", "从链接安装")
         )
         self.actionDownload_From_Url.setStatusTip(
             _translate(
                 "MainProgram",
-                "Install from link given by user (link of the app from microsoft.com)",
+                "根据用户提供的链接安装（来自 microsoft.com 的应用链接）",
             )
         )
-        self.actionclear_cache.setText(_translate("MainProgram", "Clear Cache"))
+        self.actionclear_cache.setText(_translate("MainProgram", "清理缓存"))
         self.actionclear_cache.setStatusTip(
-            _translate("MainProgram", "Clear all files like [downloads,logs.. etc]")
+            _translate("MainProgram", "清理下载、日志等缓存文件")
         )
         self.actionInstall_Driver_Chrome.setText(
-            _translate("MainProgram", "Install Driver + Chrome")
+            _translate("MainProgram", "安装驱动与 Chrome")
         )
         self.actionInstall_Chrome_Driver.setText(
-            _translate("MainProgram", "Install Chrome Driver")
+            _translate("MainProgram", "安装 Chrome 驱动")
         )
         self.actionInstall_Chrome_Driver.setStatusTip(
-            _translate("MainProgram", "Download and install chrome driver")
+            _translate("MainProgram", "下载并安装 Chrome 驱动")
         )
         self.actionCheck_For_Updates.setText(
-            _translate("MainProgram", "Check For Updates")
+            _translate("MainProgram", "检查更新")
         )
         self.actionCheck_For_Updates.setStatusTip(
-            _translate("MainProgram", "Check for updates")
+            _translate("MainProgram", "检查是否有新版本")
         )
-        self.actionAbout.setText(_translate("MainProgram", "About"))
-        self.actionHelp.setText(_translate("MainProgram", "Help"))
-        self.actionHelp.setStatusTip(_translate("MainProgram", "Get Help"))
-        self.actionOpen_Logs.setText(_translate("MainProgram", "Open Logs"))
-        self.actionOpen_Logs.setStatusTip(_translate("MainProgram", "Open log file"))
+        self.actionAbout.setText(_translate("MainProgram", "关于"))
+        self.actionHelp.setText(_translate("MainProgram", "帮助"))
+        self.actionHelp.setStatusTip(_translate("MainProgram", "获取帮助"))
+        self.actionOpen_Logs.setText(_translate("MainProgram", "打开日志"))
+        self.actionOpen_Logs.setStatusTip(_translate("MainProgram", "打开日志文件"))
         self.actionDownload_From_Url_2.setText(
-            _translate("MainProgram", "Download From Url")
+            _translate("MainProgram", "从链接下载")
         )
         self.actionDownload_From_Url_2.setStatusTip(
             _translate(
                 "MainProgram",
-                "Download from link given by user (link of the app from microsoft.com)",
+                "根据用户提供的链接下载（来自 microsoft.com 的应用链接）",
             )
         )
         self.actioninstall_From_File.setText(
-            _translate("MainProgram", "Install UWP App")
+            _translate("MainProgram", "安装 UWP 应用")
         )
         self.actioninstall_From_File.setStatusTip(
-            _translate("MainProgram", "Install app (Appx,Msix..etc) from local file ")
+            _translate("MainProgram", "从本地文件安装应用（Appx、Msix 等）")
         )
-        self.actionSet_Wait_Time.setText(_translate("MainProgram", "Set Wait Time"))
+        self.actionSet_Wait_Time.setText(_translate("MainProgram", "设置等待时间"))
         self.actionSet_Wait_Time.setStatusTip(
             _translate(
                 "MainProgram", "Set Wait Time ( Use If Slow Internet Speed,Default: 5)"
             )
         )
-        self.actionDownloads.setText(_translate("MainProgram", "Downloads"))
+        self.actionDownloads.setText(_translate("MainProgram", "下载目录"))
         self.actionDownloads.setStatusTip(
-            _translate("MainProgram", "Open downloads folder")
+            _translate("MainProgram", "打开下载文件夹")
         )
         self.actionAll_Dependencies.setText(
-            _translate("MainProgram", "All Dependencies")
+            _translate("MainProgram", "所有依赖")
         )
         self.actionIgnore_Latest_Version.setText(
-            _translate("MainProgram", "Ignore  Version")
+            _translate("MainProgram", "忽略版本")
         )
         self.actionIgnore_Latest_Version.setStatusTip(
-            _translate("MainProgram", "Download all versions of the dependencies")
+            _translate("MainProgram", "下载依赖的所有版本")
         )
         self.actionIgnore_All_filters.setText(
-            _translate("MainProgram", "Ignore All  Filters")
+            _translate("MainProgram", "忽略所有筛选")
         )
         self.actionIgnore_All_filters.setStatusTip(
             _translate(
                 "MainProgram",
-                "Download all dependencies regardless of system arch (x64,x32,Arm), type (Appx,Msix..etc), latest version",
+                "无视系统架构（x64/x86/Arm）、类型（Appx/Msix 等）与版本，下载全部依赖",
             )
         )
-        self.actionget_using_url.setText(_translate("MainProgram", "Get From Link"))
+        self.actionget_using_url.setText(_translate("MainProgram", "从链接获取"))
         self.actionget_using_url.setStatusTip(
-            _translate("MainProgram", "Get the app from the link (app url)")
+            _translate("MainProgram", "从应用链接获取下载")
         )
-        self.actionDownload_Mode.setText(_translate("MainProgram", "Download Mode"))
+        self.actionDownload_Mode.setText(_translate("MainProgram", "仅下载模式"))
         self.actionDownload_Mode.setStatusTip(
-            _translate("MainProgram", "Enable download only mode")
+            _translate("MainProgram", "启用仅下载模式")
         )
         self.actionDedicated_Folder.setText(
-            _translate("MainProgram", "Dedicated Folder")
+            _translate("MainProgram", "独立文件夹")
         )
         self.actionDedicated_Folder.setStatusTip(
             _translate(
                 "MainProgram",
-                "Download the apps to separate folder [causes increase in bandwith and storage space]",
+                "将每个应用下载到各自的独立文件夹（占用带宽与空间更多）",
             )
         )

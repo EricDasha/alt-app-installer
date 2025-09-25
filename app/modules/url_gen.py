@@ -7,6 +7,7 @@ import platform
 import re
 import time
 import warnings
+import sys
 from xml.dom import minidom
 
 import aiohttp
@@ -14,6 +15,41 @@ import aiohttp
 warnings.filterwarnings("ignore")
 # parent directory for absloute path
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def _resolve_resource_path(*relative_parts: str) -> str:
+    """Return an absolute path to a data resource that works in dev and PyInstaller.
+
+    Tries multiple locations in order:
+    1) Next to the executable (onedir dist), e.g. dist/.../<parts>
+    2) Inside PyInstaller's temporary folder (_MEIPASS), optionally under 'app'
+    3) Relative to this module's parent_dir (source run)
+    """
+    candidates = []
+
+    # 1) dist onedir next to exe
+    try:
+        exe_dir = os.path.dirname(sys.executable)
+        candidates.append(os.path.join(exe_dir, *relative_parts))
+        candidates.append(os.path.join(exe_dir, "app", *relative_parts))
+    except Exception:
+        pass
+
+    # 2) PyInstaller _MEIPASS
+    meipass = getattr(sys, "_MEIPASS", None)
+    if meipass:
+        candidates.append(os.path.join(meipass, *relative_parts))
+        candidates.append(os.path.join(meipass, "app", *relative_parts))
+
+    # 3) Source tree relative
+    candidates.append(os.path.join(parent_dir, *relative_parts))
+    candidates.append(os.path.join(parent_dir, "app", *relative_parts))
+
+    for p in candidates:
+        if p and os.path.exists(p):
+            return p
+    # Fallback to the first constructed path (for error message)
+    return candidates[0]
 
 # using this to check if the user has decieded to stop the process
 
@@ -137,7 +173,7 @@ async def url_generator(
         release_type = "Retail"
 
         # getting the encrypted cookie for the fe3 delivery api
-        with open(rf"{parent_dir}\data\xml\GetCookie.xml", "r") as f:
+        with open(_resolve_resource_path("data", "xml", "GetCookie.xml"), "r") as f:
             cookie_content = f.read()
         check(Event)
         out = await (
@@ -155,7 +191,7 @@ async def url_generator(
 
         # getting the update id,revision number and package name from the fe3 delivery api by providing the encrpyted cookie, cat_id, realse type
         # Map {"retail": "Retail", "release preview": "RP","insider slow": "WIS", "insider fast": "WIF"}
-        with open(rf"{parent_dir}\data\xml\WUIDRequest.xml", "r") as f:
+        with open(_resolve_resource_path("data", "xml", "WUIDRequest.xml"), "r") as f:
             cat_id_content = f.read().format(cookie, cat_id, release_type)
         check(Event)
         out = await (
@@ -216,7 +252,7 @@ async def url_generator(
             final_dict[value] = identities[value]
 
         # getting the download url for the files using the api
-        with open(rf"{parent_dir}\data\xml\FE3FileUrl.xml", "r") as f:
+        with open(_resolve_resource_path("data", "xml", "FE3FileUrl.xml"), "r") as f:
             file_content = f.read()
 
         file_dict = {}  # the final result

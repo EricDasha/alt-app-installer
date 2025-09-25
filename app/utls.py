@@ -38,7 +38,7 @@ class UrlBox(QDialog):
         Form.setMinimumSize(QtCore.QSize(300, 49))
         Form.setMaximumSize(QtCore.QSize(600, 49))
         Form.setContextMenuPolicy(QtCore.Qt.ContextMenuPolicy.NoContextMenu)
-        Form.setWindowTitle("Enter URL")
+        Form.setWindowTitle("输入链接")
         icon = QIcon()
         icon.addPixmap(
             QPixmap(f"{curr_dir}/data/images/main.ico"),
@@ -58,7 +58,7 @@ class UrlBox(QDialog):
         self.horizontalLayout.addWidget(self.install_link_lineEdit)
         self.install_link_ok_btn = QtWidgets.QPushButton(Form)
         self.install_link_ok_btn.setObjectName("install_link_ok_btn")
-        self.install_link_ok_btn.setText("OK")
+        self.install_link_ok_btn.setText("确定")
         self.horizontalLayout.addWidget(self.install_link_ok_btn)
         self.verticalLayout.addLayout(self.horizontalLayout)
         spacerItem = QtWidgets.QSpacerItem(
