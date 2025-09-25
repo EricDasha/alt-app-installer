@@ -79,3 +79,4 @@ https://youtu.be/ayIilTc-6u4
 - [StoreLib](https://github.com/StoreDev/StoreLib)：下载链接生成API
 - [pypdl](https://github.com/mjishnu/pypdl)：下载器
 - [MS-Store-API](https://github.com/ThomasPe/MS-Store-API)：下载链接生成API
+- [mjishnu](https://github.com/mjishnu/alt-app-installer)：原项目作者
